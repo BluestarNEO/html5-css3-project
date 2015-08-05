@@ -1,0 +1,295 @@
+/*
+  Author: Keith Wasielewksi
+  Date: 6/27/2015
+  Version: 1.0
+*/
+
+/****************************************
+  Inherited Styles
+*****************************************/
+
+html {
+    box-sizing: border-box;
+    color: #444;
+    font: 12pt 'Open Sans', Arial;
+    font-weight: 400;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    color: inherit;
+    font: inherit;
+}
+
+/****************************************
+  Defaults
+*****************************************/
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    font-weight: 300;
+}
+
+button {
+    border: none;
+    border-radius: 4px;
+}
+
+/****************************************
+  Layout
+*****************************************/
+
+/***** Top portion of page *****/
+
+.hero-panel {
+    background: radial-gradient(rgba(20, 169, 213, 0.6), rgba(20, 169, 213, 1)), url(../images/bg.jpg);
+    background-size: cover;
+    color: white;
+    position: relative;
+}
+
+.hero-panel > div {
+    min-height: 450px;
+    margin: 0 auto;
+    width: 960px;
+}
+
+/* Header portion with logo, search, and nav */
+
+.main-header {
+    height: 150px;
+    position: relative;
+}
+
+.logo {
+    float: left;
+    font-family: Lobster, Helvetica, Arial;
+    font-size: 55px;
+    margin: 5px 0 0 5px;
+}
+
+.search-form {
+    float: right;
+    margin-top: 15px;
+}
+
+.search-form input {
+    background-color: transparent;
+    border: 1px solid rgba(255,255,255,0.6);
+    padding-left: 5px;
+}
+
+.search-form input::-webkit-input-placeholder {
+    color: rgba(255,255,255,0.6);
+    font-family: 'Open Sans', Helvetica, Arial;
+    font-weight: 300;
+}
+
+.search-form button {
+    background-color: #de4f09;
+    vertical-align: bottom;
+}
+
+.main-nav {
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+    width: 960px;
+}
+
+.main-nav a {
+    display: inline-block;
+    padding: 15px 20px;
+}
+
+/* Text banner on lower portion of the .hero div */
+
+.welcome-banner {
+    background-color: transparent;
+    bottom: 30px;
+    position: absolute;
+    margin: 0 auto;
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+
+.welcome-banner h1 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+/***** Lower portion of content *****/
+
+.primary-content {
+    background-color: #d5dde4;
+}
+
+.primary-content > div {
+    min-height: 750px;
+    margin: 0 auto;
+    width: 960px;
+}
+
+/* Div boxes with links on how to raise, feed, and sell one's pups */
+
+.info-box-header, .info-box {
+    height: 180px;
+    position: relative;
+}
+
+.info-box-header {
+    text-align: center;
+}
+
+.info-box {
+    background-color: white;
+    box-shadow: 0 0 12px -5px black;
+    display: inline-block;
+    margin: -20px 5px 0 5px;
+    overflow: hidden;
+    width: 300px;
+}
+
+.info-box h2 {
+    font-weight: 700;
+}
+
+.raise, .feed, .sell {
+    border-top: 4px solid #88d22a;
+}
+
+.info-box.raise {
+    border-color: #de4f09;
+}
+
+.info-box.sell {
+    border-color: #4188d2;
+}
+
+.info-box button {
+    background-color: white;
+}
+
+.btn-raise, .btn-feed, .btn-sell {
+    border: 2px solid #88d22a;
+}
+
+.btn-raise {
+    border-color: #de4f09;
+    color: #de4f09;
+}
+
+.btn-feed {
+    color: #88d22a;
+}
+
+.btn-sell {
+    border-color: #4188d2;
+    color: #4188d2;
+}
+
+/*** Portion of content to view pups ***/
+
+.puppy-section {
+    background-color: white;
+    box-shadow: 0 0 12px -5px black;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+/* Featured puppies on the left side */
+
+.puppy-features {
+    float: left;
+    min-height: 450px;
+    width: 400px;
+}
+
+.puppy-features > div {
+    background-color: #e6f0f8;
+    margin: 10px;
+    overflow: hidden;
+    width: 380px;
+}
+
+.puppy-pic img {
+    display: block;
+    float: left;
+    width: 90px;
+}
+
+.puppy-info h2, .puppy-info p {
+    margin: 0 0 0 95px;
+}
+
+.puppy-info h2 {
+    color: #588cd0;
+    font-size: 25px;
+}
+
+/* Gallery view of all puppies */
+
+.puppy-galleries {
+    float: left;
+    width: 560px;
+}
+
+.puppy-galleries > div {
+    background-color: #dfefd1;
+    display: inline-block;
+    margin: 10px 0 0 10px;
+    vertical-align: top;
+    width: 155px;
+}
+
+.gallery-pic img{
+    display: block;
+    height: 155px;
+    width: 155px;
+}
+
+.gallery-info h2, .gallery-info p {
+    color: #425e3d;
+}
+
+.gallery-info h2 {
+    background-color: #88d22a;
+    font-size: 20px;
+    padding-left: 5px;
+    margin: 0;
+}
+
+.gallery-info p {
+    margin: 5px;
+}
+
+@media (max-width: 980px) {
+    .main-header {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .logo {
+        float: none;
+        font-size: 35px;
+        margin-top: 15px;
+    }
+
+    .search-form {
+        position: absolute;
+        top: 10px;
+        right: 0;
+    }
+
+    .hero-panel > div, .primary-content > div {
+        width: 660px;
+    }
+}
